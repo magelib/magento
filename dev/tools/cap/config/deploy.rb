@@ -3,6 +3,7 @@ lock "~> 3.10.1"
 
 set :application, "Test-Deploy"
 set :repo_url, "git@github.com:gabehou/magento.git"
+set :deploy_to, "/home/bitnami/apps/magento/htdocs/"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

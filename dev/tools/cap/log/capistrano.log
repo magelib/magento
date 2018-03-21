@@ -1,0 +1,208 @@
+# Logfile created on 2018-03-20 22:46:56 -0500 by logger.rb/56815
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 22:46:56 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ea058b6c] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [ea058b6c] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ea058b6c] Finished in 0.914 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [29b37ff1] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [29b37ff1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [29b37ff1] Finished in 0.212 seconds with exit status 0 (successful).
+  INFO [4da3de89] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [4da3de89] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [4da3de89] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [4da3de89] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [4da3de89] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [4da3de89] 	Permission denied (publickey).
+ DEBUG [4da3de89] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 22:53:27 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bb389007] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [bb389007] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bb389007] Finished in 0.825 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [06e4418b] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [06e4418b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [06e4418b] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO [eafb15be] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [eafb15be] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [eafb15be] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [eafb15be] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [eafb15be] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [eafb15be] 	0554239c84a78061193bfb408533caa18d68d0f3	HEAD
+  INFO [eafb15be] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO [57e1666d] Running /usr/bin/env mkdir -p /var/www/Test-Deploy/shared /var/www/Test-Deploy/releases as bitnami@18.219.111.56
+ DEBUG [57e1666d] Command: /usr/bin/env mkdir -p /var/www/Test-Deploy/shared /var/www/Test-Deploy/releases
+ DEBUG [57e1666d] 	mkdir: 
+ DEBUG [57e1666d] 	cannot create directory ‘/var/www’
+ DEBUG [57e1666d] 	: Permission denied
+ DEBUG [57e1666d] 	
+ DEBUG [57e1666d] 	mkdir: 
+ DEBUG [57e1666d] 	cannot create directory ‘/var/www’
+ DEBUG [57e1666d] 	: Permission denied
+ DEBUG [57e1666d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 22:57:10 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2b6308c7] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [2b6308c7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2b6308c7] Finished in 0.981 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [54686597] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [54686597] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [54686597] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [1ef6ab3c] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [1ef6ab3c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [1ef6ab3c] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [1ef6ab3c] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [1ef6ab3c] 	0554239c84a78061193bfb408533caa18d68d0f3	HEAD
+  INFO [1ef6ab3c] Finished in 0.677 seconds with exit status 0 (successful).
+  INFO [3ed503a3] Running /usr/bin/env mkdir -p /shared /releases as bitnami@18.219.111.56
+ DEBUG [3ed503a3] Command: /usr/bin/env mkdir -p /shared /releases
+ DEBUG [3ed503a3] 	mkdir: 
+ DEBUG [3ed503a3] 	cannot create directory ‘/shared’
+ DEBUG [3ed503a3] 	: Permission denied
+ DEBUG [3ed503a3] 	
+ DEBUG [3ed503a3] 	mkdir: 
+ DEBUG [3ed503a3] 	cannot create directory ‘/releases’
+ DEBUG [3ed503a3] 	: Permission denied
+ DEBUG [3ed503a3] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 22:59:42 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [fa253aef] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [fa253aef] Command: /usr/bin/env mkdir -p /tmp
+  INFO [fa253aef] Finished in 0.784 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [dfbddf35] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [dfbddf35] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [dfbddf35] Finished in 0.213 seconds with exit status 0 (successful).
+  INFO [13b8fc71] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [13b8fc71] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [13b8fc71] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [13b8fc71] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [13b8fc71] 	0554239c84a78061193bfb408533caa18d68d0f3	HEAD
+  INFO [13b8fc71] Finished in 0.703 seconds with exit status 0 (successful).
+  INFO [78806476] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento2/shared /home/bitnami/apps/magento2/releases as bitnami@18.219.111.56
+ DEBUG [78806476] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento2/shared /home/bitnami/apps/magento2/releases
+ DEBUG [78806476] 	mkdir: 
+ DEBUG [78806476] 	cannot create directory ‘/home/bitnami/apps/magento2’
+ DEBUG [78806476] 	: Permission denied
+ DEBUG [78806476] 	
+ DEBUG [78806476] 	mkdir: 
+ DEBUG [78806476] 	cannot create directory ‘/home/bitnami/apps/magento2’
+ DEBUG [78806476] 	: Permission denied
+ DEBUG [78806476] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 23:09:38 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1990bf3b] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [1990bf3b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1990bf3b] Finished in 0.842 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [ae9aea4f] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [ae9aea4f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [ae9aea4f] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [564b3303] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [564b3303] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [564b3303] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [564b3303] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [564b3303] 	0554239c84a78061193bfb408533caa18d68d0f3	HEAD
+  INFO [564b3303] Finished in 0.663 seconds with exit status 0 (successful).
+  INFO [9a4af180] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento2/shared /home/bitnami/apps/magento2/releases as bitnami@18.219.111.56
+ DEBUG [9a4af180] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento2/shared /home/bitnami/apps/magento2/releases
+ DEBUG [9a4af180] 	mkdir: 
+ DEBUG [9a4af180] 	cannot create directory ‘/home/bitnami/apps/magento2’
+ DEBUG [9a4af180] 	: Permission denied
+ DEBUG [9a4af180] 	
+ DEBUG [9a4af180] 	mkdir: 
+ DEBUG [9a4af180] 	cannot create directory ‘/home/bitnami/apps/magento2’
+ DEBUG [9a4af180] 	: Permission denied
+ DEBUG [9a4af180] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 23:10:37 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [70ab8b16] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [70ab8b16] Command: /usr/bin/env mkdir -p /tmp
+  INFO [70ab8b16] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [5d85d62a] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [5d85d62a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [5d85d62a] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [2ed387eb] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [2ed387eb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [2ed387eb] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [2ed387eb] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [2ed387eb] 	0554239c84a78061193bfb408533caa18d68d0f3	HEAD
+  INFO [2ed387eb] Finished in 0.688 seconds with exit status 0 (successful).
+  INFO [1f5a2f44] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases as bitnami@18.219.111.56
+ DEBUG [1f5a2f44] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases
+  INFO [1f5a2f44] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [8d1e80b9] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [8d1e80b9] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [8d1e80b9] Finished in 0.212 seconds with exit status 1 (failed).
+ DEBUG [a48a4af3] Running [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ] as bitnami@18.219.111.56
+ DEBUG [a48a4af3] Command: [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ]
+ DEBUG [a48a4af3] Finished in 0.216 seconds with exit status 1 (failed).
+ DEBUG [e4aba6de] Running if test ! -d /home/bitnami/apps/magento/htdocs/; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [e4aba6de] Command: if test ! -d /home/bitnami/apps/magento/htdocs/; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/'" 1>&2; false; fi
+ DEBUG [e4aba6de] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [d9f8a99c] Running /usr/bin/env git clone --mirror git@github.com:gabehou/magento.git /home/bitnami/apps/magento/htdocs/repo as bitnami@18.219.111.56
+ DEBUG [d9f8a99c] Command: cd /home/bitnami/apps/magento/htdocs/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git clone --mirror git@github.com:gabehou/magento.git /home/bitnami/apps/magento/htdocs/repo )
+ DEBUG [d9f8a99c] 	Cloning into bare repository '/home/bitnami/apps/magento/htdocs/repo'...
+ DEBUG [d9f8a99c] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [d9f8a99c] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+  INFO [d9f8a99c] Finished in 2.776 seconds with exit status 0 (successful).
+ DEBUG [c464f73a] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [c464f73a] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [c464f73a] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [f76259eb] Running /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git as bitnami@18.219.111.56
+ DEBUG [f76259eb] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git )
+  INFO [f76259eb] Finished in 0.222 seconds with exit status 0 (successful).
+  INFO [d04b1794] Running /usr/bin/env git remote update --prune as bitnami@18.219.111.56
+ DEBUG [d04b1794] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d04b1794] 	Fetching origin
+ DEBUG [d04b1794] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [d04b1794] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+  INFO [d04b1794] Finished in 0.715 seconds with exit status 0 (successful).
+ DEBUG [3848d080] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [3848d080] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [3848d080] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [707710fa] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041039 as bitnami@18.219.111.56
+ DEBUG [707710fa] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041039 )
+  INFO [707710fa] Finished in 0.213 seconds with exit status 0 (successful).
+  INFO [c257ab29] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321041039 as bitnami@18.219.111.56
+ DEBUG [c257ab29] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321041039 )
+  INFO [c257ab29] Finished in 1.986 seconds with exit status 0 (successful).
+ DEBUG [859b19e6] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [859b19e6] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [859b19e6] Finished in 0.233 seconds with exit status 0 (successful).
+ DEBUG [fcf725d8] Running /usr/bin/env git rev-list --max-count=1 master as bitnami@18.219.111.56
+ DEBUG [fcf725d8] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fcf725d8] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [fcf725d8] Finished in 0.246 seconds with exit status 0 (successful).
+ DEBUG [675e71f1] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321041039; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321041039'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [675e71f1] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321041039; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321041039'" 1>&2; false; fi
+ DEBUG [675e71f1] Finished in 0.207 seconds with exit status 0 (successful).
+  INFO [f95aec49] Running /usr/bin/env echo "0554239c84a78061193bfb408533caa18d68d0f3" >> REVISION as bitnami@18.219.111.56
+ DEBUG [f95aec49] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321041039 && /usr/bin/env echo "0554239c84a78061193bfb408533caa18d68d0f3" >> REVISION
+  INFO [f95aec49] Finished in 0.218 seconds with exit status 0 (successful).
+  INFO [6f786722] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/releases/20180321041039 /home/bitnami/apps/magento/htdocs/releases/current as bitnami@18.219.111.56
+ DEBUG [6f786722] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/releases/20180321041039 /home/bitnami/apps/magento/htdocs/releases/current
+  INFO [6f786722] Finished in 0.209 seconds with exit status 0 (successful).
+  INFO [74e29479] Running /usr/bin/env mv /home/bitnami/apps/magento/htdocs/releases/current /home/bitnami/apps/magento/htdocs as bitnami@18.219.111.56
+ DEBUG [74e29479] Command: /usr/bin/env mv /home/bitnami/apps/magento/htdocs/releases/current /home/bitnami/apps/magento/htdocs
+ DEBUG [74e29479] 	mv: 
+ DEBUG [74e29479] 	cannot overwrite directory '/home/bitnami/apps/magento/htdocs/current' with non-directory
+ DEBUG [74e29479] 	
