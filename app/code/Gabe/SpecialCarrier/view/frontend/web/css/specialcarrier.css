@@ -1,0 +1,31 @@
+/*.table-checkout-shipping-method tbody td{*/
+    /*border-top:none;*/
+/*}*/
+/*.table-checkout-shipping-method tbody tr.row-carriers-titles td,*/
+/*.table-checkout-shipping-method tbody tr.row-method td{*/
+    /*padding: 5px;*/
+/*}*/
+/*.table-checkout-shipping-method tbody tr.row-carriers-titles td.col-price,*/
+/*.table-checkout-shipping-method tbody tr.row-carriers-titles td.col-carrier-title{*/
+    /*font-weight: bold;*/
+/*}*/
+/*.table-checkout-shipping-method tbody tr.row-carriers-titles td{*/
+    /*padding-top: 10px;*/
+/*}*/
+/*.table-checkout-shipping-method tbody.carrierblock tr.row-carriers-titles,*/
+/*.table-checkout-shipping-method tbody.carrierblock tr.row-method,*/
+/*.table-checkout-shipping-method tbody.carrierblock tr.row-additional{*/
+    /*display: none;*/
+/*}*/
+/*.table-checkout-shipping-method tbody.carrierblock.checked tr.row-carriers-titles,*/
+/*.table-checkout-shipping-method tbody.carrierblock.checked tr.row-method,*/
+/*.table-checkout-shipping-method tbody.carrierblock.checked tr.row-additional{*/
+    /*display: table-row;*/
+/*}*/
+/*.table-checkout-shipping-method tbody.carrierblock tr.row-additional label.required:after{*/
+    /*content:'*';*/
+    /*color:red;*/
+    /*display: inline;*/
+    /*font-size: 12px;*/
+    /*margin-left: 4px;*/
+/*}*/

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <int_specialcarrier>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Gabe\SpecialCarrier\Model\Carrier\SpecialCarrier</model>
+                <method1name>My UPS Account</method1name>
+                <method1price>0.00</method1price>
+                <title>My UPS Account</title>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+            </int_specialcarrier>
+            <!--<invoice>-->
+                <!--<active>1</active>-->
+                <!--<sallowspecific>0</sallowspecific>-->
+                <!--<model>Gabe\SpecialCarrier\Model\Carrier\SpecialCarrier</model>-->
+                <!--<method1name>My UPS Account</method1name>-->
+                <!--<method1price>0.00</method1price>-->
+                <!--<title>My UPS Account</title>-->
+                <!--<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>-->
+            <!--</invoice>-->
+            <!--<third_party>-->
+                <!--<active>1</active>-->
+                <!--<sallowspecific>0</sallowspecific>-->
+                <!--<model>Gabe\SpecialCarrier\Model\Carrier\SpecialCarrier</model>-->
+                <!--<method1name>My UPS Account</method1name>-->
+                <!--<method1price>0.00</method1price>-->
+                <!--<title>My UPS Account</title>-->
+                <!--<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>-->
+            <!--</third_party>-->
+
+        </carriers>
+    </default>
+</config>

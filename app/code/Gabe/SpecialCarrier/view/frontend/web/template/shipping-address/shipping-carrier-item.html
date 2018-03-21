@@ -1,0 +1,84 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<tr class="row"
+    click="element.selectShippingMethod">
+    <td class="col col-method">
+        <input type="radio"
+               class="radio"
+               ifnot="method.error_message"
+               ko-checked="element.isSelected"
+               ko-value="method.carrier_code + '_' + method.method_code"
+               attr="'aria-labelledby': 'label_method_' + method.method_code + '_' + method.carrier_code + ' ' + 'label_carrier_' + method.method_code + '_' + method.carrier_code,
+                    'checked': element.rates().length == 1 || element.isSelected" />
+    </td>
+    <td class="col col-price">
+        <each args="element.getRegion('price')" render="" />
+    </td>
+    <td class="col col-method"
+        attr="'id': 'label_method_' + method.method_code + '_' + method.carrier_code"
+        text="method.method_title" />
+    <td class="col col-carrier"
+        attr="'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code"
+        text="method.carrier_title" />
+</tr>
+<tr class="row row-error"
+    if="method.error_message">
+    <td class="col col-error" colspan="4">
+        <div role="alert" class="message error">
+            <div text="method.error_message"></div>
+        </div>
+        <span class="no-display">
+            <input type="radio"
+                   attr="'value' : method.method_code, 'id': 's_method_' + method.method_code" />
+        </span>
+    </td>
+</tr>
+<!--f="///carrier.carrier_code=='int_specialcarrier'-->
+    <tr class="row row-additional form">
+        <td colspan="4">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="field">
+                            <label attr="'for': 'label_' + carrier.carrier_code" class="required" translate="'Shipping Carrier (UPS, FedEx or Special Carrier Name)'"></label>
+                            <input attr="'name': 'label_' + carrier.carrier_code,
+                                     'id': 'label_' + carrier.carrier_code"
+                                   data-bind="textInput: element.selected_carrier" class="required int_specialcarrier_input input-text"
+                                   type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label attr="'for': 'label_account_' + carrier.carrier_code" class="required" translate="'Shipping Carrier Account Number'"></label>
+                            <input attr="'name': 'label_account_' + carrier.carrier_code,
+                                     'id': 'label_account_' + carrier.carrier_code"
+                                   data-bind="textInput: element.carrier_account" class="required int_specialcarrier_input input-text"
+                                   type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label attr="'for': 'label_method_' + carrier.carrier_code" class="required" translate="'Shipping Method (Ground, Next Day, Standard, etc)'"></label>
+                            <input attr="'name': 'label_method_' + carrier.carrier_code,
+                                     'id': 'label_method_' + carrier.carrier_code"
+                                   data-bind="textInput: element.carrier_method" class="required int_specialcarrier_input input-text"
+                                   type="text"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field">
+                            <label attr="'for': 'label_instructions_' + carrier.carrier_code" translate="'Special Instructions'"></label>
+                            <textarea attr="'name': 'label_instructions_' + carrier.carrier_code,
+                                     'id': 'label_instructions_' + carrier.carrier_code"
+                                      data-bind="textInput: element.carrier_instructions" class="required int_specialcarrier_input input-text"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</tbody>
