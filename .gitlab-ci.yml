@@ -7,7 +7,7 @@ staging_deploy:
     - cd dev/tools/cap
     - cap staging deploy
   only:
-    - develop
+    - staging
 
 production_deploy:
   stage: deploy
