@@ -1,0 +1,19 @@
+image: ruby:2.1
+
+staging_deploy:
+  stage: deploy
+  script:
+    - gem install capistrano
+    - cd dev/tools/cap
+    - cap staging deploy
+  only:
+    - develop
+
+production_deploy:
+  stage: deploy
+  script:
+    - gem install capistrano
+    - cd dev/tools/cap
+    - cap production deploy
+  only:
+    - master
