@@ -206,3 +206,1263 @@ and the repository exists.
  DEBUG [74e29479] 	mv: 
  DEBUG [74e29479] 	cannot overwrite directory '/home/bitnami/apps/magento/htdocs/current' with non-directory
  DEBUG [74e29479] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 23:15:46 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4d55c4ff] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [4d55c4ff] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4d55c4ff] Finished in 0.771 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [759aca5c] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [759aca5c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [759aca5c] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [756c26b9] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [756c26b9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [756c26b9] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [756c26b9] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [756c26b9] 	95888fcbfd902fbc9594b803da4ce96adf5087b9	HEAD
+  INFO [756c26b9] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [87e009d4] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases as bitnami@18.219.111.56
+ DEBUG [87e009d4] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases
+  INFO [87e009d4] Finished in 0.209 seconds with exit status 0 (successful).
+ DEBUG [bde47bec] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [bde47bec] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [bde47bec] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [8f6fe974] Running [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ] as bitnami@18.219.111.56
+ DEBUG [8f6fe974] Command: [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ]
+ DEBUG [8f6fe974] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bitnami/apps/magento/htdocs/repo
+ DEBUG [e2177445] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [e2177445] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [e2177445] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [c151f325] Running /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git as bitnami@18.219.111.56
+ DEBUG [c151f325] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git )
+  INFO [c151f325] Finished in 0.222 seconds with exit status 0 (successful).
+  INFO [fe018bff] Running /usr/bin/env git remote update --prune as bitnami@18.219.111.56
+ DEBUG [fe018bff] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fe018bff] 	Fetching origin
+ DEBUG [fe018bff] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [fe018bff] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [fe018bff] 	From github.com:gabehou/magento
+   0554239..95888fc  master     -> master
+  INFO [fe018bff] Finished in 0.727 seconds with exit status 0 (successful).
+ DEBUG [fab410ed] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [fab410ed] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [fab410ed] Finished in 0.209 seconds with exit status 0 (successful).
+  INFO [301a7e0c] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041549 as bitnami@18.219.111.56
+ DEBUG [301a7e0c] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041549 )
+  INFO [301a7e0c] Finished in 0.213 seconds with exit status 0 (successful).
+  INFO [57b2e71b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321041549 as bitnami@18.219.111.56
+ DEBUG [57b2e71b] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321041549 )
+  INFO [57b2e71b] Finished in 2.093 seconds with exit status 0 (successful).
+ DEBUG [ed6a549c] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [ed6a549c] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [ed6a549c] Finished in 0.219 seconds with exit status 0 (successful).
+ DEBUG [26684fb9] Running /usr/bin/env git rev-list --max-count=1 master as bitnami@18.219.111.56
+ DEBUG [26684fb9] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [26684fb9] 	95888fcbfd902fbc9594b803da4ce96adf5087b9
+ DEBUG [26684fb9] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [bc22ba73] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321041549; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321041549'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [bc22ba73] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321041549; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321041549'" 1>&2; false; fi
+ DEBUG [bc22ba73] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [26c0edc3] Running /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION as bitnami@18.219.111.56
+ DEBUG [26c0edc3] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321041549 && /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION
+  INFO [26c0edc3] Finished in 0.218 seconds with exit status 0 (successful).
+  INFO [96d0aef9] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/releases/20180321041549 /home/bitnami/apps/magento/htdocs/releases/current as bitnami@18.219.111.56
+ DEBUG [96d0aef9] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/releases/20180321041549 /home/bitnami/apps/magento/htdocs/releases/current
+  INFO [96d0aef9] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [122bd4dc] Running /usr/bin/env mv /home/bitnami/apps/magento/htdocs/releases/current /home/bitnami/apps/magento/htdocs as bitnami@18.219.111.56
+ DEBUG [122bd4dc] Command: /usr/bin/env mv /home/bitnami/apps/magento/htdocs/releases/current /home/bitnami/apps/magento/htdocs
+  INFO [122bd4dc] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [6724fc12] Running /usr/bin/env ls -x /home/bitnami/apps/magento/htdocs/releases as bitnami@18.219.111.56
+ DEBUG [6724fc12] Command: /usr/bin/env ls -x /home/bitnami/apps/magento/htdocs/releases
+ DEBUG [6724fc12] 	20180321041039	20180321041549
+ DEBUG [6724fc12] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [1db47fb9] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [1db47fb9] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases'" 1>&2; false; fi
+ DEBUG [1db47fb9] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [caedbfb2] Running /usr/bin/env echo "Branch master (at 95888fcbfd902fbc9594b803da4ce96adf5087b9) deployed as release 20180321041549 by gabrielaleman" >> /home/bitnami/apps/magento/htdocs/revisions.log as bitnami@18.219.111.56
+ DEBUG [caedbfb2] Command: cd /home/bitnami/apps/magento/htdocs/releases && /usr/bin/env echo "Branch master (at 95888fcbfd902fbc9594b803da4ce96adf5087b9) deployed as release 20180321041549 by gabrielaleman" >> /home/bitnami/apps/magento/htdocs/revisions.log
+  INFO [caedbfb2] Finished in 0.225 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 23:18:54 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6edd33d4] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [6edd33d4] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [6edd33d4] Finished in 0.772 seconds with exit status 0 (successful).
+  INFO [38e11d67] Running /usr/bin/env git fetch origin as gabrielaleman@localhost
+ DEBUG [38e11d67] Command: /usr/bin/env git fetch origin
+  INFO [38e11d67] Finished in 0.387 seconds with exit status 0 (successful).
+ DEBUG [aa03574c] Running if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [aa03574c] Command: if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi
+ DEBUG [aa03574c] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [aa090285] Running /usr/bin/env cat REVISION as bitnami@18.219.111.56
+ DEBUG [aa090285] Command: cd /home/bitnami/apps/magento/htdocs/current && /usr/bin/env cat REVISION
+ DEBUG [aa090285] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [aa090285] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [4f26acf3] Running /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3 as gabrielaleman@localhost
+ DEBUG [4f26acf3] Command: /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [4f26acf3] 	remotes/origin/staging
+ DEBUG [4f26acf3] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [aeff4b40] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [aeff4b40] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [aeff4b40] 	origin/master
+ DEBUG [aeff4b40] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [83cd24f2] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [83cd24f2] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [83cd24f2] 	origin/master
+ DEBUG [83cd24f2] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [43bfb8fc] Running /usr/bin/env git name-rev --always --name-only origin/master as gabrielaleman@localhost
+ DEBUG [43bfb8fc] Command: /usr/bin/env git name-rev --always --name-only origin/master
+ DEBUG [43bfb8fc] 	master
+ DEBUG [43bfb8fc] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [c9d9d760] Running /usr/bin/env git log remotes/origin/staging..master --pretty="format:%C(yellow)%h %Cblue%>(12)%ai %Cgreen%<(7)%aN%Cred%d %Creset%s" as gabrielaleman@localhost
+ DEBUG [c9d9d760] Command: /usr/bin/env git log remotes/origin/staging..master --pretty="format:%C(yellow)%h %Cblue%>(12)%ai %Cgreen%<(7)%aN%Cred%d %Creset%s"
+ DEBUG [c9d9d760] 	95888fc 2018-03-20 23:14:28 -0500 gabehou (HEAD -> master, origin/master) tesst 2
+ DEBUG [c9d9d760] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [0;90mChanges pending deployment on 18.219.111.56 (remotes/origin/staging -> master):[0m
+  INFO 95888fc 2018-03-20 23:14:28 -0500 gabehou (HEAD -> master, origin/master) tesst 2
+ DEBUG [5762cf29] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [5762cf29] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [5762cf29] Finished in 0.140 seconds with exit status 0 (successful).
+ DEBUG [47ad2a46] Running if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [47ad2a46] Command: if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi
+ DEBUG [47ad2a46] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [b20f86ec] Running /usr/bin/env cat REVISION as bitnami@18.219.111.56
+ DEBUG [b20f86ec] Command: cd /home/bitnami/apps/magento/htdocs/current && /usr/bin/env cat REVISION
+ DEBUG [b20f86ec] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [b20f86ec] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [c0cfdf16] Running /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3 as gabrielaleman@localhost
+ DEBUG [c0cfdf16] Command: /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [c0cfdf16] 	remotes/origin/staging
+ DEBUG [c0cfdf16] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [0255abde] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [0255abde] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [0255abde] 	origin/master
+ DEBUG [0255abde] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [0442e61e] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [0442e61e] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [0442e61e] 	origin/master
+ DEBUG [0442e61e] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [3d77be5c] Running /usr/bin/env git name-rev --always --name-only origin/master as gabrielaleman@localhost
+ DEBUG [3d77be5c] Command: /usr/bin/env git name-rev --always --name-only origin/master
+ DEBUG [3d77be5c] 	master
+ DEBUG [3d77be5c] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [166f47e6] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [166f47e6] Command: /usr/bin/env mkdir -p /tmp
+  INFO [166f47e6] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [b7acaf1d] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [b7acaf1d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [b7acaf1d] Finished in 0.225 seconds with exit status 0 (successful).
+  INFO [7d506143] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [7d506143] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [7d506143] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [7d506143] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [7d506143] 	95888fcbfd902fbc9594b803da4ce96adf5087b9	HEAD
+  INFO [7d506143] Finished in 0.679 seconds with exit status 0 (successful).
+  INFO [9f5abf22] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases as bitnami@18.219.111.56
+ DEBUG [9f5abf22] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases
+  INFO [9f5abf22] Finished in 0.219 seconds with exit status 0 (successful).
+  INFO [aa009ae1] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/shared/var/tmp as bitnami@18.219.111.56
+ DEBUG [aa009ae1] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/shared/var/tmp
+  INFO [aa009ae1] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [3dc63946] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/app/etc /home/bitnami/apps/magento/htdocs/shared/var as bitnami@18.219.111.56
+ DEBUG [3dc63946] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/app/etc /home/bitnami/apps/magento/htdocs/shared/var
+  INFO [3dc63946] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [595d9442] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [595d9442] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ]
+ DEBUG [595d9442] Finished in 0.214 seconds with exit status 1 (failed).
+  INFO [bc5c26ea] Running touch /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php as bitnami@18.219.111.56
+ DEBUG [bc5c26ea] Command: touch /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php
+  INFO [bc5c26ea] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [d3d58ab9] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [d3d58ab9] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ]
+ DEBUG [d3d58ab9] Finished in 0.212 seconds with exit status 1 (failed).
+  INFO [7a4e0c0f] Running touch /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php as bitnami@18.219.111.56
+ DEBUG [7a4e0c0f] Command: touch /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php
+  INFO [7a4e0c0f] Finished in 0.207 seconds with exit status 0 (successful).
+ DEBUG [28d1813c] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [28d1813c] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ]
+ DEBUG [28d1813c] Finished in 0.213 seconds with exit status 1 (failed).
+  INFO [af3aecba] Running touch /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status as bitnami@18.219.111.56
+ DEBUG [af3aecba] Command: touch /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status
+  INFO [af3aecba] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [2adc59ea] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [2adc59ea] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ]
+ DEBUG [2adc59ea] Finished in 0.215 seconds with exit status 1 (failed).
+  INFO [9a8ddcd3] Running touch /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status as bitnami@18.219.111.56
+ DEBUG [9a8ddcd3] Command: touch /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status
+  INFO [9a8ddcd3] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [ab09bbd8] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [ab09bbd8] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ]
+ DEBUG [ab09bbd8] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [af3efdac] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [af3efdac] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ]
+ DEBUG [af3efdac] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [69e6f8a8] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [69e6f8a8] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ]
+ DEBUG [69e6f8a8] Finished in 0.207 seconds with exit status 0 (successful).
+ DEBUG [3a75ee5f] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [3a75ee5f] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ]
+ DEBUG [3a75ee5f] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [46e02bc6] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [46e02bc6] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [46e02bc6] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [1aa1c1e0] Running /usr/bin/env cat /home/bitnami/apps/magento/htdocs/current/REVISION 2>/dev/null as bitnami@18.219.111.56
+ DEBUG [1aa1c1e0] Command: /usr/bin/env cat /home/bitnami/apps/magento/htdocs/current/REVISION 2>/dev/null
+ DEBUG [1aa1c1e0] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [1aa1c1e0] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [49f9f9df] Running [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ] as bitnami@18.219.111.56
+ DEBUG [49f9f9df] Command: [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ]
+ DEBUG [49f9f9df] Finished in 0.212 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bitnami/apps/magento/htdocs/repo
+ DEBUG [a2c46ebe] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [a2c46ebe] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [a2c46ebe] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [1fc1d2f3] Running /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git as bitnami@18.219.111.56
+ DEBUG [1fc1d2f3] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git )
+  INFO [1fc1d2f3] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [b9c7b574] Running /usr/bin/env git remote update --prune as bitnami@18.219.111.56
+ DEBUG [b9c7b574] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b9c7b574] 	Fetching origin
+ DEBUG [b9c7b574] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [b9c7b574] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+  INFO [b9c7b574] Finished in 2.758 seconds with exit status 0 (successful).
+ DEBUG [b80639dc] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [b80639dc] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [b80639dc] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [0748a347] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041901 as bitnami@18.219.111.56
+ DEBUG [0748a347] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041901 )
+  INFO [0748a347] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [8ffc703c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321041901 as bitnami@18.219.111.56
+ DEBUG [8ffc703c] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321041901 )
+  INFO [8ffc703c] Finished in 1.827 seconds with exit status 0 (successful).
+ DEBUG [a607f586] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [a607f586] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [a607f586] Finished in 0.237 seconds with exit status 0 (successful).
+ DEBUG [f3263c32] Running /usr/bin/env git rev-list --max-count=1 master as bitnami@18.219.111.56
+ DEBUG [f3263c32] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f3263c32] 	95888fcbfd902fbc9594b803da4ce96adf5087b9
+ DEBUG [f3263c32] Finished in 0.236 seconds with exit status 0 (successful).
+ DEBUG [ce08e75a] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321041901; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321041901'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [ce08e75a] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321041901; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321041901'" 1>&2; false; fi
+ DEBUG [ce08e75a] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [894f6e0c] Running /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION as bitnami@18.219.111.56
+ DEBUG [894f6e0c] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321041901 && /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION
+  INFO [894f6e0c] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [3362687c] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [3362687c] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php ]
+ DEBUG [3362687c] Finished in 0.212 seconds with exit status 1 (failed).
+  INFO [fb166e2b] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc /home/bitnami/apps/magento/htdocs/releases/20180321041901/var as bitnami@18.219.111.56
+ DEBUG [fb166e2b] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc /home/bitnami/apps/magento/htdocs/releases/20180321041901/var
+  INFO [fb166e2b] Finished in 0.219 seconds with exit status 0 (successful).
+ DEBUG [c88029de] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [c88029de] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php ]
+ DEBUG [c88029de] Finished in 0.212 seconds with exit status 1 (failed).
+ DEBUG [8708e533] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [8708e533] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php ]
+ DEBUG [8708e533] Finished in 0.220 seconds with exit status 1 (failed).
+  INFO [a836e42c] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php as bitnami@18.219.111.56
+ DEBUG [a836e42c] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php
+  INFO [a836e42c] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [be3f3a1e] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [be3f3a1e] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php ]
+ DEBUG [be3f3a1e] Finished in 0.218 seconds with exit status 1 (failed).
+ DEBUG [cc2ea47b] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [cc2ea47b] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php ]
+ DEBUG [cc2ea47b] Finished in 0.225 seconds with exit status 1 (failed).
+  INFO [3221b013] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php as bitnami@18.219.111.56
+ DEBUG [3221b013] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.local.php
+  INFO [3221b013] Finished in 0.219 seconds with exit status 0 (successful).
+ DEBUG [87352523] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [87352523] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.setup_cronjob_status ]
+ DEBUG [87352523] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [92141148] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [92141148] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.setup_cronjob_status ]
+ DEBUG [92141148] Finished in 0.218 seconds with exit status 1 (failed).
+  INFO [72220b44] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.setup_cronjob_status as bitnami@18.219.111.56
+ DEBUG [72220b44] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.setup_cronjob_status
+  INFO [72220b44] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [24a71295] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [24a71295] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.update_cronjob_status ]
+ DEBUG [24a71295] Finished in 0.227 seconds with exit status 1 (failed).
+ DEBUG [657ff1b6] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [657ff1b6] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.update_cronjob_status ]
+ DEBUG [657ff1b6] Finished in 0.216 seconds with exit status 1 (failed).
+  INFO [e92b0cd3] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.update_cronjob_status as bitnami@18.219.111.56
+ DEBUG [e92b0cd3] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/.update_cronjob_status
+  INFO [e92b0cd3] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [42275c14] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub /home/bitnami/apps/magento/htdocs/releases/20180321041901/var as bitnami@18.219.111.56
+ DEBUG [42275c14] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub /home/bitnami/apps/magento/htdocs/releases/20180321041901/var
+  INFO [42275c14] Finished in 0.207 seconds with exit status 0 (successful).
+ DEBUG [8fa83357] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media ] as bitnami@18.219.111.56
+ DEBUG [8fa83357] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media ]
+ DEBUG [8fa83357] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [04549228] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media ] as bitnami@18.219.111.56
+ DEBUG [04549228] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media ]
+ DEBUG [04549228] Finished in 0.216 seconds with exit status 0 (successful).
+  INFO [6f4014b7] Running /usr/bin/env rm -rf /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media as bitnami@18.219.111.56
+ DEBUG [6f4014b7] Command: /usr/bin/env rm -rf /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media
+  INFO [6f4014b7] Finished in 0.226 seconds with exit status 0 (successful).
+  INFO [4680f91b] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media as bitnami@18.219.111.56
+ DEBUG [4680f91b] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/media
+  INFO [4680f91b] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [4af43f39] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/sitemaps ] as bitnami@18.219.111.56
+ DEBUG [4af43f39] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/sitemaps ]
+ DEBUG [4af43f39] Finished in 0.228 seconds with exit status 1 (failed).
+ DEBUG [92f4af63] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/sitemaps ] as bitnami@18.219.111.56
+ DEBUG [92f4af63] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/sitemaps ]
+ DEBUG [92f4af63] Finished in 0.217 seconds with exit status 1 (failed).
+  INFO [09d233c5] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/sitemaps as bitnami@18.219.111.56
+ DEBUG [09d233c5] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/releases/20180321041901/pub/sitemaps
+  INFO [09d233c5] Finished in 0.208 seconds with exit status 0 (successful).
+ DEBUG [ca8fb4b2] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/backups ] as bitnami@18.219.111.56
+ DEBUG [ca8fb4b2] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/backups ]
+ DEBUG [ca8fb4b2] Finished in 0.209 seconds with exit status 1 (failed).
+ DEBUG [1be6ba51] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/backups ] as bitnami@18.219.111.56
+ DEBUG [1be6ba51] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/backups ]
+ DEBUG [1be6ba51] Finished in 0.210 seconds with exit status 1 (failed).
+  INFO [29e4858c] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/backups as bitnami@18.219.111.56
+ DEBUG [29e4858c] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/backups
+  INFO [29e4858c] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [4d04196a] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/composer_home ] as bitnami@18.219.111.56
+ DEBUG [4d04196a] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/composer_home ]
+ DEBUG [4d04196a] Finished in 0.235 seconds with exit status 1 (failed).
+ DEBUG [cc01d144] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/composer_home ] as bitnami@18.219.111.56
+ DEBUG [cc01d144] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/composer_home ]
+ DEBUG [cc01d144] Finished in 0.213 seconds with exit status 1 (failed).
+  INFO [3ffc0fa0] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/composer_home as bitnami@18.219.111.56
+ DEBUG [3ffc0fa0] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/composer_home
+  INFO [3ffc0fa0] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [72bfa049] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/importexport ] as bitnami@18.219.111.56
+ DEBUG [72bfa049] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/importexport ]
+ DEBUG [72bfa049] Finished in 0.213 seconds with exit status 1 (failed).
+ DEBUG [2c330eeb] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/importexport ] as bitnami@18.219.111.56
+ DEBUG [2c330eeb] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/importexport ]
+ DEBUG [2c330eeb] Finished in 0.216 seconds with exit status 1 (failed).
+  INFO [5d608422] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/importexport as bitnami@18.219.111.56
+ DEBUG [5d608422] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/importexport
+  INFO [5d608422] Finished in 0.245 seconds with exit status 0 (successful).
+ DEBUG [548d4847] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/import_history ] as bitnami@18.219.111.56
+ DEBUG [548d4847] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/import_history ]
+ DEBUG [548d4847] Finished in 0.219 seconds with exit status 1 (failed).
+ DEBUG [2f8eb1e8] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/import_history ] as bitnami@18.219.111.56
+ DEBUG [2f8eb1e8] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/import_history ]
+ DEBUG [2f8eb1e8] Finished in 0.211 seconds with exit status 1 (failed).
+  INFO [f2ba4057] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/import_history as bitnami@18.219.111.56
+ DEBUG [f2ba4057] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/import_history
+  INFO [f2ba4057] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [207aeceb] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/log ] as bitnami@18.219.111.56
+ DEBUG [207aeceb] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/log ]
+ DEBUG [207aeceb] Finished in 0.215 seconds with exit status 1 (failed).
+ DEBUG [b8d5c65a] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/log ] as bitnami@18.219.111.56
+ DEBUG [b8d5c65a] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/log ]
+ DEBUG [b8d5c65a] Finished in 0.217 seconds with exit status 1 (failed).
+  INFO [fe725217] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/log as bitnami@18.219.111.56
+ DEBUG [fe725217] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/log
+  INFO [fe725217] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [c6768355] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/session ] as bitnami@18.219.111.56
+ DEBUG [c6768355] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/session ]
+ DEBUG [c6768355] Finished in 0.216 seconds with exit status 1 (failed).
+ DEBUG [17776377] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/session ] as bitnami@18.219.111.56
+ DEBUG [17776377] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/session ]
+ DEBUG [17776377] Finished in 0.235 seconds with exit status 1 (failed).
+  INFO [830b1921] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/session as bitnami@18.219.111.56
+ DEBUG [830b1921] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/session
+  INFO [830b1921] Finished in 0.226 seconds with exit status 0 (successful).
+ DEBUG [a09c10a4] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/tmp ] as bitnami@18.219.111.56
+ DEBUG [a09c10a4] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/tmp ]
+ DEBUG [a09c10a4] Finished in 0.222 seconds with exit status 1 (failed).
+ DEBUG [abb3ead7] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/tmp ] as bitnami@18.219.111.56
+ DEBUG [abb3ead7] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/tmp ]
+ DEBUG [abb3ead7] Finished in 0.216 seconds with exit status 1 (failed).
+  INFO [3fa74fbe] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/tmp /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/tmp as bitnami@18.219.111.56
+ DEBUG [3fa74fbe] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/tmp /home/bitnami/apps/magento/htdocs/releases/20180321041901/var/tmp
+  INFO [3fa74fbe] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [ce0d5467] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.php ] as bitnami@18.219.111.56
+ DEBUG [ce0d5467] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/config.php ]
+ DEBUG [ce0d5467] Finished in 0.211 seconds with exit status 0 (successful).
+ DEBUG [d9ddc95d] Running /usr/bin/env php -r '; $cfg = include "/home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php";; exit((int)!isset($cfg["install"]["date"]));; ' as bitnami@18.219.111.56
+ DEBUG [d9ddc95d] Command: /usr/bin/env php -r '; $cfg = include "/home/bitnami/apps/magento/htdocs/releases/20180321041901/app/etc/env.php";; exit((int)!isset($cfg["install"]["date"]));; '
+ DEBUG [d9ddc95d] Finished in 0.503 seconds with exit status 1 (failed).
+ ERROR [0;31mError on 18.219.111.56:[0m No environment configuration could be found. Please configure app/etc/env.php and retry!
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 23:22:46 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a95f6805] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [a95f6805] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [a95f6805] Finished in 0.794 seconds with exit status 0 (successful).
+  INFO [e794b2e2] Running /usr/bin/env git fetch origin as gabrielaleman@localhost
+ DEBUG [e794b2e2] Command: /usr/bin/env git fetch origin
+  INFO [e794b2e2] Finished in 0.324 seconds with exit status 0 (successful).
+ DEBUG [2fedb116] Running if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [2fedb116] Command: if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi
+ DEBUG [2fedb116] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [4771521e] Running /usr/bin/env cat REVISION as bitnami@18.219.111.56
+ DEBUG [4771521e] Command: cd /home/bitnami/apps/magento/htdocs/current && /usr/bin/env cat REVISION
+ DEBUG [4771521e] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [4771521e] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [b8c380b4] Running /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3 as gabrielaleman@localhost
+ DEBUG [b8c380b4] Command: /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [b8c380b4] 	remotes/origin/staging
+ DEBUG [b8c380b4] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [a153caf7] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [a153caf7] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [a153caf7] 	origin/master
+ DEBUG [a153caf7] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [701cee59] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [701cee59] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [701cee59] 	origin/master
+ DEBUG [701cee59] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [f4269dea] Running /usr/bin/env git name-rev --always --name-only origin/master as gabrielaleman@localhost
+ DEBUG [f4269dea] Command: /usr/bin/env git name-rev --always --name-only origin/master
+ DEBUG [f4269dea] 	master
+ DEBUG [f4269dea] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [032ae65d] Running /usr/bin/env git log remotes/origin/staging..master --pretty="format:%C(yellow)%h %Cblue%>(12)%ai %Cgreen%<(7)%aN%Cred%d %Creset%s" as gabrielaleman@localhost
+ DEBUG [032ae65d] Command: /usr/bin/env git log remotes/origin/staging..master --pretty="format:%C(yellow)%h %Cblue%>(12)%ai %Cgreen%<(7)%aN%Cred%d %Creset%s"
+ DEBUG [032ae65d] 	95888fc 2018-03-20 23:14:28 -0500 gabehou (HEAD -> master, origin/master) tesst 2
+ DEBUG [032ae65d] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [0;90mChanges pending deployment on 18.219.111.56 (remotes/origin/staging -> master):[0m
+  INFO 95888fc 2018-03-20 23:14:28 -0500 gabehou (HEAD -> master, origin/master) tesst 2
+ DEBUG [f2002ba4] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [f2002ba4] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [f2002ba4] Finished in 0.146 seconds with exit status 0 (successful).
+ DEBUG [9e354aaa] Running if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [9e354aaa] Command: if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi
+ DEBUG [9e354aaa] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [15abdf44] Running /usr/bin/env cat REVISION as bitnami@18.219.111.56
+ DEBUG [15abdf44] Command: cd /home/bitnami/apps/magento/htdocs/current && /usr/bin/env cat REVISION
+ DEBUG [15abdf44] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [15abdf44] Finished in 0.224 seconds with exit status 0 (successful).
+ DEBUG [27506229] Running /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3 as gabrielaleman@localhost
+ DEBUG [27506229] Command: /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [27506229] 	remotes/origin/staging
+ DEBUG [27506229] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [c956e43e] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [c956e43e] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [c956e43e] 	origin/master
+ DEBUG [c956e43e] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [423aa130] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [423aa130] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [423aa130] 	origin/master
+ DEBUG [423aa130] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [54cea902] Running /usr/bin/env git name-rev --always --name-only origin/master as gabrielaleman@localhost
+ DEBUG [54cea902] Command: /usr/bin/env git name-rev --always --name-only origin/master
+ DEBUG [54cea902] 	master
+ DEBUG [54cea902] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [79002416] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [79002416] Command: /usr/bin/env mkdir -p /tmp
+  INFO [79002416] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [80bc5199] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [80bc5199] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [80bc5199] Finished in 0.224 seconds with exit status 0 (successful).
+  INFO [6c487671] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [6c487671] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [6c487671] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [6c487671] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [6c487671] 	95888fcbfd902fbc9594b803da4ce96adf5087b9	HEAD
+  INFO [6c487671] Finished in 0.692 seconds with exit status 0 (successful).
+  INFO [5d7d52d7] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases as bitnami@18.219.111.56
+ DEBUG [5d7d52d7] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases
+  INFO [5d7d52d7] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [5afb8a43] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/shared/var/tmp as bitnami@18.219.111.56
+ DEBUG [5afb8a43] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/shared/var/tmp
+  INFO [5afb8a43] Finished in 0.211 seconds with exit status 0 (successful).
+  INFO [4237eec7] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/app/etc /home/bitnami/apps/magento/htdocs/shared/var as bitnami@18.219.111.56
+ DEBUG [4237eec7] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/app/etc /home/bitnami/apps/magento/htdocs/shared/var
+  INFO [4237eec7] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [001623b2] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [001623b2] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ]
+ DEBUG [001623b2] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [1e3bc883] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [1e3bc883] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ]
+ DEBUG [1e3bc883] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [425e55e3] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [425e55e3] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ]
+ DEBUG [425e55e3] Finished in 0.211 seconds with exit status 0 (successful).
+ DEBUG [37cfa844] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [37cfa844] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ]
+ DEBUG [37cfa844] Finished in 0.230 seconds with exit status 0 (successful).
+ DEBUG [ced13998] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [ced13998] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ]
+ DEBUG [ced13998] Finished in 0.220 seconds with exit status 0 (successful).
+ DEBUG [b4fdae5c] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [b4fdae5c] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ]
+ DEBUG [b4fdae5c] Finished in 0.222 seconds with exit status 0 (successful).
+ DEBUG [493f95c6] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [493f95c6] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ]
+ DEBUG [493f95c6] Finished in 0.224 seconds with exit status 0 (successful).
+ DEBUG [fb7bfe9b] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [fb7bfe9b] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ]
+ DEBUG [fb7bfe9b] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [49aead38] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [49aead38] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [49aead38] Finished in 0.211 seconds with exit status 0 (successful).
+ DEBUG [5a869e19] Running /usr/bin/env cat /home/bitnami/apps/magento/htdocs/current/REVISION 2>/dev/null as bitnami@18.219.111.56
+ DEBUG [5a869e19] Command: /usr/bin/env cat /home/bitnami/apps/magento/htdocs/current/REVISION 2>/dev/null
+ DEBUG [5a869e19] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [5a869e19] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [f25bfd21] Running [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ] as bitnami@18.219.111.56
+ DEBUG [f25bfd21] Command: [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ]
+ DEBUG [f25bfd21] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bitnami/apps/magento/htdocs/repo
+ DEBUG [d3cce4c9] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [d3cce4c9] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [d3cce4c9] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO [2f8f3288] Running /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git as bitnami@18.219.111.56
+ DEBUG [2f8f3288] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git )
+  INFO [2f8f3288] Finished in 0.246 seconds with exit status 0 (successful).
+  INFO [0f257b0b] Running /usr/bin/env git remote update --prune as bitnami@18.219.111.56
+ DEBUG [0f257b0b] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0f257b0b] 	Fetching origin
+ DEBUG [0f257b0b] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [0f257b0b] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+  INFO [0f257b0b] Finished in 0.653 seconds with exit status 0 (successful).
+ DEBUG [0b19d79a] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [0b19d79a] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [0b19d79a] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO [1766184f] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042253 as bitnami@18.219.111.56
+ DEBUG [1766184f] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042253 )
+  INFO [1766184f] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [4ebe64fe] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321042253 as bitnami@18.219.111.56
+ DEBUG [4ebe64fe] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321042253 )
+  INFO [4ebe64fe] Finished in 1.768 seconds with exit status 0 (successful).
+ DEBUG [4ae955f7] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [4ae955f7] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [4ae955f7] Finished in 0.223 seconds with exit status 0 (successful).
+ DEBUG [d9819f5c] Running /usr/bin/env git rev-list --max-count=1 master as bitnami@18.219.111.56
+ DEBUG [d9819f5c] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d9819f5c] 	95888fcbfd902fbc9594b803da4ce96adf5087b9
+ DEBUG [d9819f5c] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [cac8ccd0] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042253; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042253'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [cac8ccd0] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042253; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042253'" 1>&2; false; fi
+ DEBUG [cac8ccd0] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [2c7cb3c0] Running /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION as bitnami@18.219.111.56
+ DEBUG [2c7cb3c0] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321042253 && /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION
+  INFO [2c7cb3c0] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [4399f8ed] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [4399f8ed] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php ]
+ DEBUG [4399f8ed] Finished in 0.215 seconds with exit status 1 (failed).
+  INFO [e69ed780] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc /home/bitnami/apps/magento/htdocs/releases/20180321042253/var as bitnami@18.219.111.56
+ DEBUG [e69ed780] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc /home/bitnami/apps/magento/htdocs/releases/20180321042253/var
+  INFO [e69ed780] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [ef6492a8] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [ef6492a8] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php ]
+ DEBUG [ef6492a8] Finished in 0.224 seconds with exit status 1 (failed).
+ DEBUG [2d146dac] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [2d146dac] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php ]
+ DEBUG [2d146dac] Finished in 0.222 seconds with exit status 1 (failed).
+  INFO [2b2d5340] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php as bitnami@18.219.111.56
+ DEBUG [2b2d5340] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php
+  INFO [2b2d5340] Finished in 0.243 seconds with exit status 0 (successful).
+ DEBUG [ca1102d6] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [ca1102d6] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php ]
+ DEBUG [ca1102d6] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [48aa6e17] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [48aa6e17] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php ]
+ DEBUG [48aa6e17] Finished in 0.211 seconds with exit status 1 (failed).
+  INFO [ec3d6d8b] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php as bitnami@18.219.111.56
+ DEBUG [ec3d6d8b] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.local.php
+  INFO [ec3d6d8b] Finished in 0.226 seconds with exit status 0 (successful).
+ DEBUG [9f42b050] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [9f42b050] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.setup_cronjob_status ]
+ DEBUG [9f42b050] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [5eed5d9e] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [5eed5d9e] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.setup_cronjob_status ]
+ DEBUG [5eed5d9e] Finished in 0.205 seconds with exit status 1 (failed).
+  INFO [a530a256] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.setup_cronjob_status as bitnami@18.219.111.56
+ DEBUG [a530a256] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.setup_cronjob_status
+  INFO [a530a256] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [e57a5214] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [e57a5214] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.update_cronjob_status ]
+ DEBUG [e57a5214] Finished in 0.217 seconds with exit status 1 (failed).
+ DEBUG [e7e69a4c] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [e7e69a4c] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.update_cronjob_status ]
+ DEBUG [e7e69a4c] Finished in 0.211 seconds with exit status 1 (failed).
+  INFO [aeb0a65f] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.update_cronjob_status as bitnami@18.219.111.56
+ DEBUG [aeb0a65f] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/.update_cronjob_status
+  INFO [aeb0a65f] Finished in 0.213 seconds with exit status 0 (successful).
+  INFO [3c817a30] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub /home/bitnami/apps/magento/htdocs/releases/20180321042253/var as bitnami@18.219.111.56
+ DEBUG [3c817a30] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub /home/bitnami/apps/magento/htdocs/releases/20180321042253/var
+  INFO [3c817a30] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [35d35bdf] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media ] as bitnami@18.219.111.56
+ DEBUG [35d35bdf] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media ]
+ DEBUG [35d35bdf] Finished in 0.216 seconds with exit status 1 (failed).
+ DEBUG [a1ff2f16] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media ] as bitnami@18.219.111.56
+ DEBUG [a1ff2f16] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media ]
+ DEBUG [a1ff2f16] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [9e11fdbe] Running /usr/bin/env rm -rf /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media as bitnami@18.219.111.56
+ DEBUG [9e11fdbe] Command: /usr/bin/env rm -rf /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media
+  INFO [9e11fdbe] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [82eebe24] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media as bitnami@18.219.111.56
+ DEBUG [82eebe24] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/media
+  INFO [82eebe24] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [c909ab74] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/sitemaps ] as bitnami@18.219.111.56
+ DEBUG [c909ab74] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/sitemaps ]
+ DEBUG [c909ab74] Finished in 0.219 seconds with exit status 1 (failed).
+ DEBUG [d04ef4aa] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/sitemaps ] as bitnami@18.219.111.56
+ DEBUG [d04ef4aa] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/sitemaps ]
+ DEBUG [d04ef4aa] Finished in 0.212 seconds with exit status 1 (failed).
+  INFO [71cecd2b] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/sitemaps as bitnami@18.219.111.56
+ DEBUG [71cecd2b] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/releases/20180321042253/pub/sitemaps
+  INFO [71cecd2b] Finished in 0.226 seconds with exit status 0 (successful).
+ DEBUG [590b4e5e] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/backups ] as bitnami@18.219.111.56
+ DEBUG [590b4e5e] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/backups ]
+ DEBUG [590b4e5e] Finished in 0.213 seconds with exit status 1 (failed).
+ DEBUG [01093bc8] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/backups ] as bitnami@18.219.111.56
+ DEBUG [01093bc8] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/backups ]
+ DEBUG [01093bc8] Finished in 0.228 seconds with exit status 1 (failed).
+  INFO [685497b7] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/backups as bitnami@18.219.111.56
+ DEBUG [685497b7] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/backups
+  INFO [685497b7] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [a1f6ba2d] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/composer_home ] as bitnami@18.219.111.56
+ DEBUG [a1f6ba2d] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/composer_home ]
+ DEBUG [a1f6ba2d] Finished in 0.218 seconds with exit status 1 (failed).
+ DEBUG [09a77cfa] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/composer_home ] as bitnami@18.219.111.56
+ DEBUG [09a77cfa] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/composer_home ]
+ DEBUG [09a77cfa] Finished in 0.218 seconds with exit status 1 (failed).
+  INFO [21774f25] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/composer_home as bitnami@18.219.111.56
+ DEBUG [21774f25] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/composer_home
+  INFO [21774f25] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [f08a6d4f] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/importexport ] as bitnami@18.219.111.56
+ DEBUG [f08a6d4f] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/importexport ]
+ DEBUG [f08a6d4f] Finished in 0.209 seconds with exit status 1 (failed).
+ DEBUG [834a9efc] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/importexport ] as bitnami@18.219.111.56
+ DEBUG [834a9efc] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/importexport ]
+ DEBUG [834a9efc] Finished in 0.204 seconds with exit status 1 (failed).
+  INFO [9f646b83] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/importexport as bitnami@18.219.111.56
+ DEBUG [9f646b83] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/importexport
+  INFO [9f646b83] Finished in 0.210 seconds with exit status 0 (successful).
+ DEBUG [43fe5e48] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/import_history ] as bitnami@18.219.111.56
+ DEBUG [43fe5e48] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/import_history ]
+ DEBUG [43fe5e48] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [9396ec06] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/import_history ] as bitnami@18.219.111.56
+ DEBUG [9396ec06] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/import_history ]
+ DEBUG [9396ec06] Finished in 0.227 seconds with exit status 1 (failed).
+  INFO [ca8c5099] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/import_history as bitnami@18.219.111.56
+ DEBUG [ca8c5099] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/import_history
+  INFO [ca8c5099] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [3bef4182] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/log ] as bitnami@18.219.111.56
+ DEBUG [3bef4182] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/log ]
+ DEBUG [3bef4182] Finished in 0.206 seconds with exit status 1 (failed).
+ DEBUG [166647ef] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/log ] as bitnami@18.219.111.56
+ DEBUG [166647ef] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/log ]
+ DEBUG [166647ef] Finished in 0.225 seconds with exit status 1 (failed).
+  INFO [774a6157] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/log as bitnami@18.219.111.56
+ DEBUG [774a6157] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/log
+  INFO [774a6157] Finished in 0.241 seconds with exit status 0 (successful).
+ DEBUG [3af7b8b9] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/session ] as bitnami@18.219.111.56
+ DEBUG [3af7b8b9] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/session ]
+ DEBUG [3af7b8b9] Finished in 0.212 seconds with exit status 1 (failed).
+ DEBUG [bc60b369] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/session ] as bitnami@18.219.111.56
+ DEBUG [bc60b369] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/session ]
+ DEBUG [bc60b369] Finished in 0.217 seconds with exit status 1 (failed).
+  INFO [8879f669] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/session as bitnami@18.219.111.56
+ DEBUG [8879f669] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/session
+  INFO [8879f669] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [49cc800b] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/tmp ] as bitnami@18.219.111.56
+ DEBUG [49cc800b] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/tmp ]
+ DEBUG [49cc800b] Finished in 0.207 seconds with exit status 1 (failed).
+ DEBUG [417b7727] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/tmp ] as bitnami@18.219.111.56
+ DEBUG [417b7727] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/tmp ]
+ DEBUG [417b7727] Finished in 0.211 seconds with exit status 1 (failed).
+  INFO [fcdc5b50] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/tmp /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/tmp as bitnami@18.219.111.56
+ DEBUG [fcdc5b50] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/tmp /home/bitnami/apps/magento/htdocs/releases/20180321042253/var/tmp
+  INFO [fcdc5b50] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [ab5515c7] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.php ] as bitnami@18.219.111.56
+ DEBUG [ab5515c7] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/config.php ]
+ DEBUG [ab5515c7] Finished in 0.208 seconds with exit status 0 (successful).
+ DEBUG [1b852a32] Running /usr/bin/env php -r '; $cfg = include "/home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php";; exit((int)!isset($cfg["install"]["date"]));; ' as bitnami@18.219.111.56
+ DEBUG [1b852a32] Command: /usr/bin/env php -r '; $cfg = include "/home/bitnami/apps/magento/htdocs/releases/20180321042253/app/etc/env.php";; exit((int)!isset($cfg["install"]["date"]));; '
+ DEBUG [1b852a32] Finished in 0.456 seconds with exit status 0 (successful).
+ DEBUG [509db933] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042253; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042253'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [509db933] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042253; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042253'" 1>&2; false; fi
+ DEBUG [509db933] Finished in 0.216 seconds with exit status 0 (successful).
+ DEBUG [a3027199] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042253; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042253'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [a3027199] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042253; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042253'" 1>&2; false; fi
+ DEBUG [a3027199] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [71bf1235] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader 2>&1 as bitnami@18.219.111.56
+ DEBUG [71bf1235] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321042253 && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader 2>&1
+ DEBUG [71bf1235] 	Cannot create cache directory /opt/bitnami/php/composer/cache/repo/https---repo.magento.com/, or directory is not writable. Proceeding without cache
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Cannot create cache directory /opt/bitnami/php/composer/cache/repo/https---packagist.org/, or directory is not writable. Proceeding without cache
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Cannot create cache directory /opt/bitnami/php/composer/cache/files/, or directory is not writable. Proceeding without cache
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Warning: This development build of composer is over 60 days old. It is recommended to update it by running "/opt/bitnami/php/bin/composer.phar self-update" to get the latest version.
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Loading composer repositories with package information
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Installing dependencies from lock file
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Package operations: 221 installs, 0 updates, 0 removals
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	  - Installing magento/magento-composer-installer (0.1.13): 
+ DEBUG [71bf1235] 	Downloading (connecting...)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (0%)
+ DEBUG [71bf1235] 	           
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (10%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (20%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (75%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (95%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (100%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	  - Installing composer/ca-bundle (1.1.0): 
+ DEBUG [71bf1235] 	Downloading (connecting...)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (0%)
+ DEBUG [71bf1235] 	           
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (5%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (10%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (15%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (20%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (25%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (30%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (35%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (40%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (45%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (50%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (55%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (60%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (65%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (70%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (75%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (80%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (85%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (90%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (95%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (100%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	  - Installing composer/semver (1.4.2): Downloading (connecting...)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (0%)
+ DEBUG [71bf1235] 	           
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (35%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (95%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (100%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	  - Installing composer/spdx-licenses (1.2.0): Downloading (connecting...)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (0%)
+ DEBUG [71bf1235] 	           
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (65%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (75%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (100%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	  - Installing justinrainbow/json-schema (5.2.6): Downloading (connecting...)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (0%)
+ DEBUG [71bf1235] 	           
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (20%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (25%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (30%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (35%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (50%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (55%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (70%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (75%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (95%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	Downloading (100%)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	  - Installing magento/module-store (100.2.2): 
+ DEBUG [71bf1235] 	Downloading (connecting...)
+ DEBUG [71bf1235] 	
+ DEBUG [71bf1235] 	                                                                                                                                                     
+  [Composer\Downloader\TransportException]                                                                                                           
+  The 'https://repo.magento.com/archives/magento/module-store/magento-module-store-100.2.2.0.zip' URL could not be accessed: HTTP/1.1 403 Forbidden  
+                                                                                                                                                     
+
+install [--prefer-source] [--prefer-dist] [--dry-run] [--dev] [--no-dev] [--no-custom-installers] [--no-autoloader] [--no-scripts] [--no-progress] [--no-suggest] [-v|vv|vvv|--verbose] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--ignore-platform-reqs] [--] [<packages>]...
+
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-20 23:29:08 -0500 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c4cfc7bf] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [c4cfc7bf] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [c4cfc7bf] Finished in 0.747 seconds with exit status 0 (successful).
+  INFO [0d55b282] Running /usr/bin/env git fetch origin as gabrielaleman@localhost
+ DEBUG [0d55b282] Command: /usr/bin/env git fetch origin
+  INFO [0d55b282] Finished in 0.337 seconds with exit status 0 (successful).
+ DEBUG [6a1a5552] Running if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [6a1a5552] Command: if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi
+ DEBUG [6a1a5552] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [4f4455d4] Running /usr/bin/env cat REVISION as bitnami@18.219.111.56
+ DEBUG [4f4455d4] Command: cd /home/bitnami/apps/magento/htdocs/current && /usr/bin/env cat REVISION
+ DEBUG [4f4455d4] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [4f4455d4] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [9987a439] Running /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3 as gabrielaleman@localhost
+ DEBUG [9987a439] Command: /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [9987a439] 	remotes/origin/staging
+ DEBUG [9987a439] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [5281ec9e] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [5281ec9e] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [5281ec9e] 	origin/master
+ DEBUG [5281ec9e] Finished in 0.015 seconds with exit status 0 (successful).
+ DEBUG [eb1b87c2] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [eb1b87c2] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [eb1b87c2] 	origin/master
+ DEBUG [eb1b87c2] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [1b0e3125] Running /usr/bin/env git name-rev --always --name-only origin/master as gabrielaleman@localhost
+ DEBUG [1b0e3125] Command: /usr/bin/env git name-rev --always --name-only origin/master
+ DEBUG [1b0e3125] 	master
+ DEBUG [1b0e3125] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [2aae4f2c] Running /usr/bin/env git log remotes/origin/staging..master --pretty="format:%C(yellow)%h %Cblue%>(12)%ai %Cgreen%<(7)%aN%Cred%d %Creset%s" as gabrielaleman@localhost
+ DEBUG [2aae4f2c] Command: /usr/bin/env git log remotes/origin/staging..master --pretty="format:%C(yellow)%h %Cblue%>(12)%ai %Cgreen%<(7)%aN%Cred%d %Creset%s"
+ DEBUG [2aae4f2c] 	95888fc 2018-03-20 23:14:28 -0500 gabehou (HEAD -> master, origin/master) tesst 2
+ DEBUG [2aae4f2c] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [0;90mChanges pending deployment on 18.219.111.56 (remotes/origin/staging -> master):[0m
+  INFO 95888fc 2018-03-20 23:14:28 -0500 gabehou (HEAD -> master, origin/master) tesst 2
+ DEBUG [21c85478] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [21c85478] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [21c85478] Finished in 0.142 seconds with exit status 0 (successful).
+ DEBUG [1c6c6f28] Running if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [1c6c6f28] Command: if test ! -d /home/bitnami/apps/magento/htdocs/current; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/current'" 1>&2; false; fi
+ DEBUG [1c6c6f28] Finished in 0.209 seconds with exit status 0 (successful).
+ DEBUG [f6a9db44] Running /usr/bin/env cat REVISION as bitnami@18.219.111.56
+ DEBUG [f6a9db44] Command: cd /home/bitnami/apps/magento/htdocs/current && /usr/bin/env cat REVISION
+ DEBUG [f6a9db44] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [f6a9db44] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [75ae8d9c] Running /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3 as gabrielaleman@localhost
+ DEBUG [75ae8d9c] Command: /usr/bin/env git name-rev --always --name-only 0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [75ae8d9c] 	remotes/origin/staging
+ DEBUG [75ae8d9c] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [b11e8f6f] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [b11e8f6f] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [b11e8f6f] 	origin/master
+ DEBUG [b11e8f6f] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [23b61140] Running /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u} as gabrielaleman@localhost
+ DEBUG [23b61140] Command: /usr/bin/env git rev-parse --abbrev-ref --symbolic-full-name master@{u}
+ DEBUG [23b61140] 	origin/master
+ DEBUG [23b61140] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [e635e93c] Running /usr/bin/env git name-rev --always --name-only origin/master as gabrielaleman@localhost
+ DEBUG [e635e93c] Command: /usr/bin/env git name-rev --always --name-only origin/master
+ DEBUG [e635e93c] 	master
+ DEBUG [e635e93c] Finished in 0.011 seconds with exit status 0 (successful).
+  INFO [95ab6f2a] Running /usr/bin/env mkdir -p /tmp as bitnami@18.219.111.56
+ DEBUG [95ab6f2a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [95ab6f2a] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh 100.0%
+  INFO [7b5a4c3d] Running /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh as bitnami@18.219.111.56
+ DEBUG [7b5a4c3d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh
+  INFO [7b5a4c3d] Finished in 0.218 seconds with exit status 0 (successful).
+  INFO [e414f921] Running /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD as bitnami@18.219.111.56
+ DEBUG [e414f921] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git ls-remote git@github.com:gabehou/magento.git HEAD )
+ DEBUG [e414f921] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [e414f921] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [e414f921] 	95888fcbfd902fbc9594b803da4ce96adf5087b9	HEAD
+  INFO [e414f921] Finished in 0.611 seconds with exit status 0 (successful).
+  INFO [6ec499c2] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases as bitnami@18.219.111.56
+ DEBUG [6ec499c2] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared /home/bitnami/apps/magento/htdocs/releases
+  INFO [6ec499c2] Finished in 0.211 seconds with exit status 0 (successful).
+  INFO [7a78c745] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/shared/var/tmp as bitnami@18.219.111.56
+ DEBUG [7a78c745] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/shared/var/tmp
+  INFO [7a78c745] Finished in 0.210 seconds with exit status 0 (successful).
+  INFO [b36b10e6] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/app/etc /home/bitnami/apps/magento/htdocs/shared/var as bitnami@18.219.111.56
+ DEBUG [b36b10e6] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/shared/app/etc /home/bitnami/apps/magento/htdocs/shared/var
+  INFO [b36b10e6] Finished in 0.209 seconds with exit status 0 (successful).
+ DEBUG [59a6d182] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [59a6d182] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ]
+ DEBUG [59a6d182] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [32cb1859] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [32cb1859] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ]
+ DEBUG [32cb1859] Finished in 0.222 seconds with exit status 0 (successful).
+ DEBUG [d34c8ded] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [d34c8ded] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ]
+ DEBUG [d34c8ded] Finished in 0.222 seconds with exit status 0 (successful).
+ DEBUG [8526ad1e] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [8526ad1e] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ]
+ DEBUG [8526ad1e] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [f5bc549c] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [f5bc549c] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php ]
+ DEBUG [f5bc549c] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [cee1ead2] Running [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [cee1ead2] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php ]
+ DEBUG [cee1ead2] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [21129c9c] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [21129c9c] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status ]
+ DEBUG [21129c9c] Finished in 0.208 seconds with exit status 0 (successful).
+ DEBUG [b9e27089] Running [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [b9e27089] Command: [ -f /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status ]
+ DEBUG [b9e27089] Finished in 0.217 seconds with exit status 0 (successful).
+ DEBUG [9e7597cb] Running [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ] as bitnami@18.219.111.56
+ DEBUG [9e7597cb] Command: [ -f /home/bitnami/apps/magento/htdocs/current/REVISION ]
+ DEBUG [9e7597cb] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [58606e2a] Running /usr/bin/env cat /home/bitnami/apps/magento/htdocs/current/REVISION 2>/dev/null as bitnami@18.219.111.56
+ DEBUG [58606e2a] Command: /usr/bin/env cat /home/bitnami/apps/magento/htdocs/current/REVISION 2>/dev/null
+ DEBUG [58606e2a] 	0554239c84a78061193bfb408533caa18d68d0f3
+ DEBUG [58606e2a] Finished in 0.218 seconds with exit status 0 (successful).
+ DEBUG [ca1c5066] Running [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ] as bitnami@18.219.111.56
+ DEBUG [ca1c5066] Command: [ -f /home/bitnami/apps/magento/htdocs/repo/HEAD ]
+ DEBUG [ca1c5066] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bitnami/apps/magento/htdocs/repo
+ DEBUG [d0a1f305] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [d0a1f305] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [d0a1f305] Finished in 0.213 seconds with exit status 0 (successful).
+  INFO [af903463] Running /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git as bitnami@18.219.111.56
+ DEBUG [af903463] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabehou/magento.git )
+  INFO [af903463] Finished in 0.225 seconds with exit status 0 (successful).
+  INFO [d7bc314a] Running /usr/bin/env git remote update --prune as bitnami@18.219.111.56
+ DEBUG [d7bc314a] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d7bc314a] 	Fetching origin
+ DEBUG [d7bc314a] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+ DEBUG [d7bc314a] 	/usr/bin/ssh: /opt/bitnami/common/lib/libcrypto.so.1.0.0: no version information available (required by /usr/bin/ssh)
+  INFO [d7bc314a] Finished in 0.714 seconds with exit status 0 (successful).
+ DEBUG [f6d93876] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [f6d93876] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [f6d93876] Finished in 0.206 seconds with exit status 0 (successful).
+  INFO [c884896b] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042914 as bitnami@18.219.111.56
+ DEBUG [c884896b] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042914 )
+  INFO [c884896b] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [4d6bce2b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321042914 as bitnami@18.219.111.56
+ DEBUG [4d6bce2b] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bitnami/apps/magento/htdocs/releases/20180321042914 )
+  INFO [4d6bce2b] Finished in 1.684 seconds with exit status 0 (successful).
+ DEBUG [5b5d7de4] Running if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [5b5d7de4] Command: if test ! -d /home/bitnami/apps/magento/htdocs/repo; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/repo'" 1>&2; false; fi
+ DEBUG [5b5d7de4] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [25e34134] Running /usr/bin/env git rev-list --max-count=1 master as bitnami@18.219.111.56
+ DEBUG [25e34134] Command: cd /home/bitnami/apps/magento/htdocs/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Test-Deploy-staging-gabrielaleman.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [25e34134] 	95888fcbfd902fbc9594b803da4ce96adf5087b9
+ DEBUG [25e34134] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [b3fefbdb] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042914; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042914'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [b3fefbdb] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042914; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042914'" 1>&2; false; fi
+ DEBUG [b3fefbdb] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO [f9b0d81e] Running /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION as bitnami@18.219.111.56
+ DEBUG [f9b0d81e] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321042914 && /usr/bin/env echo "95888fcbfd902fbc9594b803da4ce96adf5087b9" >> REVISION
+  INFO [f9b0d81e] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [615e6039] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [615e6039] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php ]
+ DEBUG [615e6039] Finished in 0.213 seconds with exit status 1 (failed).
+  INFO [caf5cace] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc /home/bitnami/apps/magento/htdocs/releases/20180321042914/var as bitnami@18.219.111.56
+ DEBUG [caf5cace] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc /home/bitnami/apps/magento/htdocs/releases/20180321042914/var
+  INFO [caf5cace] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [5db8ca54] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [5db8ca54] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php ]
+ DEBUG [5db8ca54] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [a867545e] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php ] as bitnami@18.219.111.56
+ DEBUG [a867545e] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php ]
+ DEBUG [a867545e] Finished in 0.218 seconds with exit status 1 (failed).
+  INFO [163b29f2] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php as bitnami@18.219.111.56
+ DEBUG [163b29f2] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/env.php /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php
+  INFO [163b29f2] Finished in 0.209 seconds with exit status 0 (successful).
+ DEBUG [d24e674d] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [d24e674d] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php ]
+ DEBUG [d24e674d] Finished in 0.212 seconds with exit status 1 (failed).
+ DEBUG [36da307f] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php ] as bitnami@18.219.111.56
+ DEBUG [36da307f] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php ]
+ DEBUG [36da307f] Finished in 0.211 seconds with exit status 1 (failed).
+  INFO [e1c01458] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php as bitnami@18.219.111.56
+ DEBUG [e1c01458] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/app/etc/config.local.php /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.local.php
+  INFO [e1c01458] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [746f0b79] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [746f0b79] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.setup_cronjob_status ]
+ DEBUG [746f0b79] Finished in 0.215 seconds with exit status 1 (failed).
+ DEBUG [c55a6272] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.setup_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [c55a6272] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.setup_cronjob_status ]
+ DEBUG [c55a6272] Finished in 0.216 seconds with exit status 1 (failed).
+  INFO [53c0da44] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.setup_cronjob_status as bitnami@18.219.111.56
+ DEBUG [53c0da44] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.setup_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.setup_cronjob_status
+  INFO [53c0da44] Finished in 0.227 seconds with exit status 0 (successful).
+ DEBUG [0d7b5731] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [0d7b5731] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.update_cronjob_status ]
+ DEBUG [0d7b5731] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [f32ef96c] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.update_cronjob_status ] as bitnami@18.219.111.56
+ DEBUG [f32ef96c] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.update_cronjob_status ]
+ DEBUG [f32ef96c] Finished in 0.214 seconds with exit status 1 (failed).
+  INFO [bfeca074] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.update_cronjob_status as bitnami@18.219.111.56
+ DEBUG [bfeca074] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/.update_cronjob_status /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/.update_cronjob_status
+  INFO [bfeca074] Finished in 0.209 seconds with exit status 0 (successful).
+  INFO [bfff0f68] Running /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub /home/bitnami/apps/magento/htdocs/releases/20180321042914/var as bitnami@18.219.111.56
+ DEBUG [bfff0f68] Command: /usr/bin/env mkdir -p /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub /home/bitnami/apps/magento/htdocs/releases/20180321042914/var
+  INFO [bfff0f68] Finished in 0.220 seconds with exit status 0 (successful).
+ DEBUG [4449f28c] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media ] as bitnami@18.219.111.56
+ DEBUG [4449f28c] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media ]
+ DEBUG [4449f28c] Finished in 0.222 seconds with exit status 1 (failed).
+ DEBUG [fb200658] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media ] as bitnami@18.219.111.56
+ DEBUG [fb200658] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media ]
+ DEBUG [fb200658] Finished in 0.205 seconds with exit status 0 (successful).
+  INFO [62cd5c3f] Running /usr/bin/env rm -rf /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media as bitnami@18.219.111.56
+ DEBUG [62cd5c3f] Command: /usr/bin/env rm -rf /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media
+  INFO [62cd5c3f] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [42f56d49] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media as bitnami@18.219.111.56
+ DEBUG [42f56d49] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/media /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/media
+  INFO [42f56d49] Finished in 0.219 seconds with exit status 0 (successful).
+ DEBUG [f94949ed] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/sitemaps ] as bitnami@18.219.111.56
+ DEBUG [f94949ed] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/sitemaps ]
+ DEBUG [f94949ed] Finished in 0.218 seconds with exit status 1 (failed).
+ DEBUG [7c514002] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/sitemaps ] as bitnami@18.219.111.56
+ DEBUG [7c514002] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/sitemaps ]
+ DEBUG [7c514002] Finished in 0.225 seconds with exit status 1 (failed).
+  INFO [06889934] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/sitemaps as bitnami@18.219.111.56
+ DEBUG [06889934] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/pub/sitemaps /home/bitnami/apps/magento/htdocs/releases/20180321042914/pub/sitemaps
+  INFO [06889934] Finished in 0.223 seconds with exit status 0 (successful).
+ DEBUG [5975a8ab] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/backups ] as bitnami@18.219.111.56
+ DEBUG [5975a8ab] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/backups ]
+ DEBUG [5975a8ab] Finished in 0.218 seconds with exit status 1 (failed).
+ DEBUG [64243691] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/backups ] as bitnami@18.219.111.56
+ DEBUG [64243691] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/backups ]
+ DEBUG [64243691] Finished in 0.215 seconds with exit status 1 (failed).
+  INFO [47314f2c] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/backups as bitnami@18.219.111.56
+ DEBUG [47314f2c] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/backups /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/backups
+  INFO [47314f2c] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [718f4c98] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/composer_home ] as bitnami@18.219.111.56
+ DEBUG [718f4c98] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/composer_home ]
+ DEBUG [718f4c98] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [6fd54c2b] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/composer_home ] as bitnami@18.219.111.56
+ DEBUG [6fd54c2b] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/composer_home ]
+ DEBUG [6fd54c2b] Finished in 0.213 seconds with exit status 1 (failed).
+  INFO [a717c463] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/composer_home as bitnami@18.219.111.56
+ DEBUG [a717c463] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/composer_home /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/composer_home
+  INFO [a717c463] Finished in 0.207 seconds with exit status 0 (successful).
+ DEBUG [2b9f6467] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/importexport ] as bitnami@18.219.111.56
+ DEBUG [2b9f6467] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/importexport ]
+ DEBUG [2b9f6467] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [032a358c] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/importexport ] as bitnami@18.219.111.56
+ DEBUG [032a358c] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/importexport ]
+ DEBUG [032a358c] Finished in 0.212 seconds with exit status 1 (failed).
+  INFO [47128bfc] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/importexport as bitnami@18.219.111.56
+ DEBUG [47128bfc] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/importexport /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/importexport
+  INFO [47128bfc] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [d9acab71] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/import_history ] as bitnami@18.219.111.56
+ DEBUG [d9acab71] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/import_history ]
+ DEBUG [d9acab71] Finished in 0.213 seconds with exit status 1 (failed).
+ DEBUG [c5204073] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/import_history ] as bitnami@18.219.111.56
+ DEBUG [c5204073] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/import_history ]
+ DEBUG [c5204073] Finished in 0.213 seconds with exit status 1 (failed).
+  INFO [647c9d70] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/import_history as bitnami@18.219.111.56
+ DEBUG [647c9d70] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/import_history /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/import_history
+  INFO [647c9d70] Finished in 0.229 seconds with exit status 0 (successful).
+ DEBUG [b04c1df7] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/log ] as bitnami@18.219.111.56
+ DEBUG [b04c1df7] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/log ]
+ DEBUG [b04c1df7] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [5efa6093] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/log ] as bitnami@18.219.111.56
+ DEBUG [5efa6093] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/log ]
+ DEBUG [5efa6093] Finished in 0.217 seconds with exit status 1 (failed).
+  INFO [9c5ba896] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/log as bitnami@18.219.111.56
+ DEBUG [9c5ba896] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/log /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/log
+  INFO [9c5ba896] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [1bc29df4] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/session ] as bitnami@18.219.111.56
+ DEBUG [1bc29df4] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/session ]
+ DEBUG [1bc29df4] Finished in 0.216 seconds with exit status 1 (failed).
+ DEBUG [bb104128] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/session ] as bitnami@18.219.111.56
+ DEBUG [bb104128] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/session ]
+ DEBUG [bb104128] Finished in 0.208 seconds with exit status 1 (failed).
+  INFO [4dfe5ae5] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/session as bitnami@18.219.111.56
+ DEBUG [4dfe5ae5] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/session /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/session
+  INFO [4dfe5ae5] Finished in 0.213 seconds with exit status 0 (successful).
+ DEBUG [b8329cf6] Running [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/tmp ] as bitnami@18.219.111.56
+ DEBUG [b8329cf6] Command: [ -L /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/tmp ]
+ DEBUG [b8329cf6] Finished in 0.214 seconds with exit status 1 (failed).
+ DEBUG [a0fa2ea0] Running [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/tmp ] as bitnami@18.219.111.56
+ DEBUG [a0fa2ea0] Command: [ -d /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/tmp ]
+ DEBUG [a0fa2ea0] Finished in 0.214 seconds with exit status 1 (failed).
+  INFO [0a619d4b] Running /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/tmp /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/tmp as bitnami@18.219.111.56
+ DEBUG [0a619d4b] Command: /usr/bin/env ln -s /home/bitnami/apps/magento/htdocs/shared/var/tmp /home/bitnami/apps/magento/htdocs/releases/20180321042914/var/tmp
+  INFO [0a619d4b] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [a99b77ee] Running [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.php ] as bitnami@18.219.111.56
+ DEBUG [a99b77ee] Command: [ -f /home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/config.php ]
+ DEBUG [a99b77ee] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [aa6e9ea0] Running /usr/bin/env php -r '; $cfg = include "/home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php";; exit((int)!isset($cfg["install"]["date"]));; ' as bitnami@18.219.111.56
+ DEBUG [aa6e9ea0] Command: /usr/bin/env php -r '; $cfg = include "/home/bitnami/apps/magento/htdocs/releases/20180321042914/app/etc/env.php";; exit((int)!isset($cfg["install"]["date"]));; '
+ DEBUG [aa6e9ea0] Finished in 0.256 seconds with exit status 0 (successful).
+ DEBUG [ebc8836d] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042914; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042914'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [ebc8836d] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042914; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042914'" 1>&2; false; fi
+ DEBUG [ebc8836d] Finished in 0.215 seconds with exit status 0 (successful).
+ DEBUG [f6ddfff5] Running if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042914; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042914'" 1>&2; false; fi as bitnami@18.219.111.56
+ DEBUG [f6ddfff5] Command: if test ! -d /home/bitnami/apps/magento/htdocs/releases/20180321042914; then echo "Directory does not exist '/home/bitnami/apps/magento/htdocs/releases/20180321042914'" 1>&2; false; fi
+ DEBUG [f6ddfff5] Finished in 0.208 seconds with exit status 0 (successful).
+  INFO [9e77d34d] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader 2>&1 as bitnami@18.219.111.56
+ DEBUG [9e77d34d] Command: cd /home/bitnami/apps/magento/htdocs/releases/20180321042914 && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader 2>&1
+ DEBUG [9e77d34d] 	Cannot create cache directory /opt/bitnami/php/composer/cache/repo/https---repo.magento.com/, or directory is not writable. Proceeding without cache
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Cannot create cache directory /opt/bitnami/php/composer/cache/repo/https---packagist.org/, or directory is not writable. Proceeding without cache
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Cannot create cache directory /opt/bitnami/php/composer/cache/files/, or directory is not writable. Proceeding without cache
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Warning: This development build of composer is over 60 days old. It is recommended to update it by running "/opt/bitnami/php/bin/composer.phar self-update" to get the latest version.
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Loading composer repositories with package information
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Installing dependencies from lock file
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Package operations: 221 installs, 0 updates, 0 removals
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	  - Installing magento/magento-composer-installer (0.1.13): 
+ DEBUG [9e77d34d] 	Downloading (connecting...)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (0%)
+ DEBUG [9e77d34d] 	           
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (10%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (20%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (70%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (80%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (90%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (95%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (100%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	  - Installing composer/ca-bundle (1.1.0): 
+ DEBUG [9e77d34d] 	Downloading (connecting...)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (0%)
+ DEBUG [9e77d34d] 	           
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (5%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (10%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (15%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (20%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (25%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (30%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (35%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (40%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (45%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (50%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (55%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (60%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (65%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (70%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (75%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (80%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (85%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (90%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (95%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (100%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	  - Installing composer/semver (1.4.2): Downloading (connecting...)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (0%)
+ DEBUG [9e77d34d] 	           
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (35%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (85%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (100%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	  - Installing composer/spdx-licenses (1.2.0): Downloading (connecting...)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (0%)
+ DEBUG [9e77d34d] 	           
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (65%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (100%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	  - Installing justinrainbow/json-schema (5.2.6): 
+ DEBUG [9e77d34d] 	Downloading (connecting...)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (0%)
+ DEBUG [9e77d34d] 	           
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (20%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (25%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (30%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (35%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (50%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (55%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (70%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (75%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (95%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	Downloading (100%)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	  - Installing magento/module-store (100.2.2): 
+ DEBUG [9e77d34d] 	Downloading (connecting...)
+ DEBUG [9e77d34d] 	
+ DEBUG [9e77d34d] 	                                                                                                                                                     
+  [Composer\Downloader\TransportException]                                                                                                           
+  The 'https://repo.magento.com/archives/magento/module-store/magento-module-store-100.2.2.0.zip' URL could not be accessed: HTTP/1.1 403 Forbidden  
+                                                                                                                                                     
+
+install [--prefer-source] [--prefer-dist] [--dry-run] [--dev] [--no-dev] [--no-custom-installers] [--no-autoloader] [--no-scripts] [--no-progress] [--no-suggest] [-v|vv|vvv|--verbose] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--ignore-platform-reqs] [--] [<packages>]...
+
